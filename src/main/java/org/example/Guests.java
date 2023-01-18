@@ -46,21 +46,33 @@ public class Guests {
     }
 
 //insert data into table
-    public static void insertGuests() {
+    public static void insertGuests(int numG) {
 
         String url = "jdbc:sqlserver://localhost:1433;databaseName=JOIN_EXAMPLE;encrypt=true;trustServerCertificate=true";
         String user = "sa";
         String pass = "root";
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter ID");
-        int id = scanner.nextInt();
+//        System.out.println("Enter ID");
+//        int id = scanner.nextInt();
 
         System.out.println("Enter Guests Name");
         String name = scanner.next();
 
-        System.out.println("Enter Guests Location");
+        System.out.println("Enter Guests Phone");
+        String Phone = scanner.next();
+
+        System.out.println("Enter guest accompanying members");
+        String acco = scanner.next();
+
+        System.out.println("Enter guest payment amount");
+        String pay = scanner.next();
+
+        System.out.println("Enter Guests hotel id");
         String loc = scanner.next();
+
+        System.out.println("Enter Guests room id");
+        String room = scanner.next();
 
         System.out.println("Enter Created Date");
         String crDate = scanner.next();
@@ -71,7 +83,7 @@ public class Guests {
         System.out.println("Enter If Active Or In Active");
         String act = scanner.next();
 
-        String insGuests = "insert into Guests values('" + id+ "'," + name + ",'" + loc + "','" +crDate +"','" + upDate +"','" + act +"')";
+        String insGuests = "insert into Guests values('" +""+"','" + name + "','"+Phone+"','"+acco+"','"+pay+"','"+room+"'," + loc + ",'" +crDate +"','" + upDate +"','" + act +"')";
 
         Connection con = null;
 
