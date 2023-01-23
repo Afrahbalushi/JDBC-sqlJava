@@ -238,7 +238,7 @@ public class Rooms {
         System.out.println("Enter If Active Or In Active");
         String act = scanner.next();
 
-        String insRooms = "insert into Rooms values(" + id+ "," + name + "," + loc + ",'" +crDate +"','" + upDate +"','" + act +"')";
+        String insRooms = "insert into Rooms values(" + "" + ",'" + name + "'," + loc + ",'" +crDate +"','" + upDate +"','" + act +"')";
 
         Connection con = null;
 

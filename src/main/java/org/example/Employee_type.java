@@ -45,7 +45,7 @@ public class Employee_type {
         String user = "sa";
         String pass = "root";
 
-        String employee_type_name = "Khalid";
+        String employee_type_name = "Ali";
         Date created_date = new Date(System.currentTimeMillis());
         Date updated_date = new Date(System.currentTimeMillis());
         String is_Active="true";
@@ -58,9 +58,8 @@ public class Employee_type {
             Driver driver = (Driver) Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver").newInstance();
             DriverManager.registerDriver(driver);
             conn = DriverManager.getConnection(url, user, pass);
-            for (int i = 1; i <= h ;i++) {
-                String ins = "Insert into Rooms values(" + i + employee_type_name + ",'" +
-                        created_date + "','" + updated_date + "','" + is_Active + "','" + +1 +"')";
+            for (int i = 2; i <= h ;i++) {
+                String ins = "Insert into Rooms values('" + i + "' , " + employee_type_name + " , '" + created_date + "' , '" + updated_date + "' ,'" + is_Active + "' , '"+""+"')";
                 System.out.println(ins);
                 Statement st = conn.createStatement();
                 int m = st.executeUpdate(ins);
@@ -124,7 +123,7 @@ public class Employee_type {
             Scanner scanner = new Scanner(System.in);
             int inId = scanner.nextInt();
             int coun = 1;
-            String sql = "SELECT * FROM Employee_Type ORDER by id LIMT"+pri;
+            String sql = "SELECT * FROM Employee_Type ORDER by id LIMT" +pri;
             ResultSet res = st.executeQuery(sql);
             while (res.next() && coun <= pri) {
                 int id = res.getInt("id");
@@ -230,8 +229,8 @@ public class Employee_type {
         System.out.println("Enter Employee_Type Name");
         String name = scanner.next();
 
-        System.out.println("Enter Employee_Type Location");
-        String loc = scanner.next();
+//        System.out.println("Enter Employee_Type Location");
+//        String loc = scanner.next();
 
         System.out.println("Enter Created Date");
         String crDate = scanner.next();
@@ -242,7 +241,7 @@ public class Employee_type {
         System.out.println("Enter If Active Or In Active");
         String act = scanner.next();
 
-        String insEmployee_Type = "insert into Employee_Type values('" + id+ "'," + name + ",'" + loc + "','" +crDate +"','" + upDate +"'," + act +"')";
+        String insEmployee_Type = "insert into Employee_Type values('" + id + "' , '" + name + "' , '" +crDate +"' , '" + upDate +"' , '" + act + "')";
 
         Connection con = null;
 

@@ -78,17 +78,17 @@ public class hotelSystem {
 //                    int numR_T = scanner.nextInt();
 //                    Room_type.inpustUser(numR_T);
 
-                    System.out.println("Enter Numbers Of Rooms You Want To Enter: ");
-                    int numR = scanner.nextInt();
-                    Rooms.inputRooms(numR);
+//                    System.out.println("Enter Numbers Of Rooms You Want To Enter: ");
+//                    int numR = scanner.nextInt();
+//                    Rooms.inputRooms(numR);
 
 //                    System.out.println("Enter Numbers Of Guests You Want To Enter: ");
 //                    int numG = scanner.nextInt();
 //                    Guests.insertGuests(numG);
 
-                    //System.out.println("Enter Numbers Of Employee_Type You Want To Enter: ");
-                    //int numE_T = scanner.nextInt();
-                    //Employee_Type.inpustUser(numE_T);
+                    System.out.println("Enter Numbers Of Employee_Type You Want To Enter: ");
+                    int numE_T = scanner.nextInt();
+                    Employee_type.inpustUser(numE_T);
 
                     //System.out.println("Enter Numbers Of Employees You Want To Enter: ");
                     //int numE = scanner.nextInt();
@@ -99,27 +99,27 @@ public class hotelSystem {
                 case 2:
                    // hotels.inpustUser(1);
                     //Room_type.inpustUser(1);
-                    Rooms.inpustUser(1);
-                    //Guests.insertGuests(1);
-                    //Employee_type.inpustUser(1);
+//                    Rooms.inpustUser(1);
+                   // Guests.insertGuests(1);
+                    Employee_type.inputHotel();
                     //Employees.inpustUser(1);
                     break;
 
                 case 3:
                    // hotels.Printhotels(10);
                     //Room_type.Printroom_Type(10);
-                    Rooms.PrintRooms(10);
-                    //Guests.PrintGuests(10);
-                    //Employee_type.PrintEmployee_Type(10);
+//                    Rooms.PrintRooms(10);
+                   // Guests.PrintGuests(10);
+                    Employee_type.PrintEmployee_Type(10);
                     //Employees.PrintEmployees(10);
                     break;
 
                 case 4:
                     //hotels.makeIsActiveFalseById();
                    // Room_type.makeIsActiveFalseById();
-                    Rooms.makeIsActiveFalseById();
-                    //Guests.makeIsActiveFalseById();
-                    //Employee_type.makeIsActiveFalseById();
+//                    Rooms.makeIsActiveFalseById();
+//                    Guests.makeIsActiveFalseById();
+                    Employee_type.makeIsActiveFalseById();
                     //Employees.makeIsActiveFalseById();
                     break;
 
